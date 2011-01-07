@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+
+        <h2>Change your email address</h2>
+
+        <table>
+            <tr>
+                <tr><td colspan="2" class="error"><g:HTML ui:field="errors" text="&nbsp;"/></td></tr>
+                <td>Email Address: </td> <td><g:TextBox ui:field="emailAddressField"/> </td>
+                <tr><td colspan="2">&nbsp;</td></tr>
+                <tr><td colspan="2" align="right"><g:Button text="Save changes" ui:field="saveChangesButton"/></td></tr>
+            </tr>
+        </table>
+
+
+        <br/>
+        <br/>
+        <br/>
+
+        <g:HTMLPanel ui:field="successMessage" visible="false">
+            <span class="success">Your changes have been saved.</span>
+        </g:HTMLPanel>
+
+    </g:HTMLPanel>
+
+</ui:UiBinder>

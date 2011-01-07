@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:style>
+
+        .outerContainer {
+            /* since slider is on right hand side, only draw the left border */
+            border-left: 2px solid #0033A5;
+            position: absolute;
+        }
+
+        .slider {
+            background-color: #069;
+            border: 2px solid black;
+            width: 12px;
+            height: 15%;
+            position: absolute;
+        }
+
+    </ui:style>
+
+    <g:HTMLPanel>
+
+        <div style="width: 18px; height: 100%; position: relative;">
+
+            <g:AbsolutePanel ui:field="absolutePanel" addStyleNames="{style.outerContainer}">
+
+                <g:AbsolutePanel ui:field="slider" addStyleNames="{style.slider} bluntRounded">
+                </g:AbsolutePanel>
+
+            </g:AbsolutePanel>
+
+        </div>
+
+    </g:HTMLPanel>
+
+</ui:UiBinder>

@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:widgets='urn:import:com.gwtquickstarter.client.widgets'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+
+        <h2>
+            <a href="#!store:">Want to learn to how to type? <img style="vertical-align: middle;" border="none" src="../icons/sign_me_up.png" alt="sign me up"/></a>
+        </h2>
+
+        <br/>
+        <br/>
+
+        <g:HTMLPanel ui:field="loginForm">
+            <div class="beigeWithBorder rounded" style="width: 65%;">
+                <p>
+                   Already have an account? Great!<br/>
+                    You can login right here:
+                </p>
+
+                <table style="">
+                    <tr><td>Email: </td> <td><g:TextBox ui:field="usernameField"/></td><td/></tr>
+                    <tr><td>Password: </td> <td><widgets:EnterPasswordBox ui:field="passwordField"/></td><td><widgets:ErrorMessage ui:field="errors"/></td></tr>
+                    <tr><td>Remember me:</td><td><g:CheckBox ui:field="rememberMe"/></td></tr>
+                    <tr><td colspan="3">&nbsp;</td></tr>
+                    <tr><td colspan="3" align="right"><g:Button text="Login" ui:field="loginButton"/></td></tr>
+                </table>
+
+            </div>
+
+            <br/>
+            <br/>
+
+            <div>
+                <a href="#!forgot:">Forgot your password?</a>
+            </div>
+
+
+        </g:HTMLPanel>
+
+    </g:HTMLPanel>
+
+</ui:UiBinder>

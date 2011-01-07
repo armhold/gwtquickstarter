@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='gwtquickstarter'>
+
+    <!-- Includes the public resources used by gwtquickstarter, but doesn't inject a style sheet into the application.
+         This allows you to override the styles in your own .css file. To do so, inherit from
+         GWTQuickstarterResources.gwt.xml instead of GWTQuickstarter.gwt.xml, and add an explicit reference
+         to gwtquickstarter.css in your HTML.
+
+         see: http://groups.google.ca/group/google-web-toolkit/browse_thread/thread/95262295583685c2
+       -->
+
+    <!-- Inherit the core Web Toolkit stuff. -->
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.place.Place"/>
+    <inherits name="com.google.gwt.activity.Activity"/>
+
+    <!-- Specify the paths for translatable code -->
+    <source path='client'/>
+    <source path='shared'/>
+    <source path='public'/>
+
+</module>

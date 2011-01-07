@@ -1,0 +1,33 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:widgets='urn:import:com.gwtquickstarter.client.widgets'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+
+        <div style="text-align:center;">
+
+          <h2>Change your email address</h2>
+          <br/>
+          <br/>
+
+          <g:HTMLPanel ui:field="changeEmailForm">
+              <table>
+                  <tr><td colspan="2" style="font-size: 10pt; color: red; text-align: right;"><g:HTML ui:field="errors" text="&nbsp;"/></td></tr>
+                  <tr><td align="right">New Email:</td> <td align="left"><g:TextBox ui:field="emailField"/></td></tr>
+                  <tr><td align="right">Verify Email:</td> <td align="left"><g:TextBox ui:field="verifyEmailField"/></td></tr>
+                  <tr><td colspan="2">&nbsp;</td></tr>
+                  <tr><td colspan="2" align="right"><g:Button text="Change my password" ui:field="submitButton"/></td></tr>
+              </table>
+          </g:HTMLPanel>
+
+           <p style="margin-top:50px;">
+               <g:HTMLPanel ui:field="successMessage" visible="false">
+                   <span class="success">Your email address has been changed.</span>
+               </g:HTMLPanel>
+           </p>
+
+        </div>
+    </g:HTMLPanel>
+
+</ui:UiBinder>

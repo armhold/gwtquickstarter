@@ -1,0 +1,30 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:widgets='urn:import:com.gwtquickstarter.client.widgets'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+
+        <table>
+            <tr>
+                <td>Email address:</td>
+                <td>
+                    <widgets:EnterTextBox ui:field="emailField"/>
+                </td>
+                <td>
+                    <g:Button ui:field="submitButton" text="Submit"/>
+                </td>
+            </tr>
+
+        </table>
+
+        <g:HTMLPanel ui:field="thanksMessage" visible="false">
+            <span style="color: green;">Thanks for your interest!</span>
+        </g:HTMLPanel>
+
+        <g:HTMLPanel ui:field="invalidEmailMessage" visible="false">
+            <span style="color: red;">Oops, that's not a valid email address!</span>
+        </g:HTMLPanel>
+
+    </g:HTMLPanel>
+
+</ui:UiBinder>

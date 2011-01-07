@@ -1,0 +1,15 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:widgets='urn:import:com.gwtquickstarter.client.widgets'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+        <div style="" class="">
+            <widgets:ClickableLabel ui:field="loginLink" text="Login/Signup"/>
+            <g:InlineLabel ui:field="signedOnAs" visible="false"/>
+            <widgets:ClickableLabel ui:field="logoutLink" text="[logout]" visible="false"/>
+        </div>
+    </g:HTMLPanel>
+
+
+</ui:UiBinder>
+        

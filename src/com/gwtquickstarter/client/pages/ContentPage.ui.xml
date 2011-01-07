@@ -1,0 +1,13 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:widgets='urn:import:com.gwtquickstarter.client.widgets'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel styleName="content">
+
+        <div style="margin-left: 50px; ">
+            <g:VerticalPanel ui:field="vpanel"/>
+        </div>
+
+    </g:HTMLPanel>
+
+</ui:UiBinder>

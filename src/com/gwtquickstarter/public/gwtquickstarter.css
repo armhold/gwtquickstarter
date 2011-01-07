@@ -1,0 +1,498 @@
+
+html {
+    margin:0;
+    padding:0;
+}
+
+body, table td, select  {
+    /*font-family: minion-pro-1, minion-pro-2, 'Times New Roman', Georgia, serif;*/
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    color: #666;;
+}
+
+
+div#container {
+    width: 1100px;
+    margin:0 auto;
+    background-color: white;
+    color: #666;
+}
+
+div#middle {
+    clear: both;  /* need this after navbar */
+    min-height: 500px;
+    width: 800px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+#footer {
+    /*clear:both;*/
+    background:#cc9;
+}
+
+.shadow {
+    -moz-box-shadow: 0 0 7px 7px #313131;
+    -webkit-box-shadow: 0 0 7px 7px #313131;
+    box-shadow: 0 0 7px 7px #313131;
+}
+
+#header h1 {
+    font-size: 25pt;
+}
+
+h1 {
+    font-size: 20pt;
+    font-style: normal;
+    font-weight: 650;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+h2 {
+    font-size: 16pt;
+    font-weight: normal;
+    /*line-height: 30px;*/
+}
+
+h3 {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.checkmark li h4 {
+    font-size: 12pt;
+    margin: 0px;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.gwt-Button {
+    color: #069;
+}
+
+a, a:visited, a:active, a:link {
+    text-decoration: none;
+    color: #069;
+}
+
+#feedback_div a { color: #f5f5dc; }
+
+.navlist {
+    width: 100%;
+    float: left;
+    margin: 0 0 0 0;
+    padding: 0;
+    list-style: none;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+.navlist li {
+    float: left;
+    font-size: 12pt;
+}
+
+.navlist li a, #login_div {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #069;
+    border-right: 1px solid #ccc;
+}
+
+.navlist li a:hover, #login_div:hover {
+    color: #c00;
+    background-color: #fff;
+}
+
+.navlist .currentLink, .currentLink, .currentLink:visited, .currentLink:active, .currentLink:link, .currentLink:hover {
+    color: #c00;
+}
+
+.lessonKey {
+    font-size: 20pt;
+    font-family: Monospace;
+    font-weight: bold;
+    color: black;
+}
+
+table.pricing {
+    border-collapse: collapse;
+}
+
+table.pricing th, table.pricing td {
+    border: 1px solid #9FB6C8;
+    background-color: #ECEEEE;
+    padding: 10px;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+table.pricing td.primary, table.pricing th.primary {
+    color: green;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+table.pricing td.empty {
+    background-color: transparent;
+    border: none;
+}
+
+table.pricing tr.header th {
+    color: #003553;
+    background-color: #B8CEE2;
+}
+
+p, table td {
+    font-size: 12pt;
+}
+
+.gwt-TextBox, .gwt-PasswordTextBox {
+    font-size: 16pt;
+}
+
+tt td {
+    font-size: 12pt;
+    font-family: Monospace;
+    color: black;
+}
+
+.content {
+    background-color: white;
+}
+
+.starterStore {
+    color: #00008b;
+}
+
+
+.okCancelDialog {
+}
+
+.okCancelDialog .gwt-Label {
+    font-size: 15pt;
+}
+
+.clickableLabel {
+    cursor: pointer;
+    cursor: hand;
+    color: #069;
+}
+
+.primary .clickableLabel  {
+    color: green;
+}
+
+.clickableLabelAnimating {
+    font-weight: bold;
+}
+
+#feedback_div .clickableLabel {
+    color: #f5f5dc;
+}
+
+#feedback_div {
+    padding: 6px;
+
+    font-size: 16pt;
+    position: fixed;
+    top: 45%;
+    right: -30px;
+    height: 30px;
+
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    z-index:inherit;
+}
+
+.feedBackWidget .gwt-TextArea {
+    /*background-color:  white;*/
+    width: 500px;
+    height: 200px;
+}
+
+.loadingPopup .gwt-Label {
+    color: #0A456F;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.gwt-PushButton {
+    background: white;
+    border: none;
+}
+
+.standout {
+    color: #8b0000;
+}
+
+pre {
+    font-size: 14pt;
+}
+
+.next {
+    float: right;
+}
+
+.price {
+    color: green;
+}
+
+.success {
+    color: green;
+}
+
+.error {
+    font-size: 10pt; color: red;
+}
+
+/*
+ * Widget.setVisible(false) will cause it to not take up space on the page.
+ * use 'visibility: hidden' when you want it to be hidden, but still take up space.
+ */
+.hidden {
+    visibility: hidden;
+}
+
+.popupLabel {
+    cursor: pointer;
+    cursor: hand;
+    color: blue;
+}
+
+.popupLabel .content {
+    color: #ffa500;
+}
+
+.rounded {
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.bluntRounded {
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.greens {
+    background-color: #005303;
+}
+
+.blues {
+    background-color: #6A8FA7;
+}
+
+.blueVerticalGradient {
+  color: white;
+
+  /* fallback (Opera) */
+  background: #6A8FA7;
+
+  /* Mozilla: */
+
+  background: -moz-linear-gradient(top, #6A8FA7, #C5DEE4);
+
+  /* Chrome, Safari:*/
+  background: -webkit-gradient(linear,
+              left top, left bottom, from(#6A8FA7), to(#C5DEE4));
+
+  /* MSIE */
+  filter: progid:DXImageTransform.Microsoft.Gradient(
+              StartColorStr='#6A8FA7', EndColorStr='#C5DEE4', GradientType=0);
+}
+
+.beigeWithBorder {
+    background-color: #f5f5dc;
+    border: 1px solid #FFE890;
+    color: black;
+    padding: 10px;
+}
+
+ul.checkmark li {
+    /*background:url("../checkmark.gif") no-repeat 0 50%;*/
+    /*padding-left: 20px;*/
+    margin-top: 10px;
+}
+
+ul.checkmark {
+    /*list-style-type: none;*/
+}
+
+.longText {
+   width: 600px;
+}
+
+.longText p {
+    font-size: 12pt;
+}
+
+.kids {
+   width: 600px;
+}
+
+.question {
+    font-weight: bold;
+}
+
+.answer {
+    margin-left: 30px;
+    /*font-size: smaller;*/
+}
+
+.formLayout {
+    border: solid 2px #b7ddf2;
+    background: #ebf4fb;
+    padding: 10px;
+}
+
+.formLayout h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.formLayout p {
+    font-size: 11px;
+    color: #666666;
+    /*margin-bottom: 8px;*/
+    border-bottom: solid 1px #b7ddf2;
+    padding-bottom: 10px;
+}
+
+.formLayout .labelLeft {
+    display: block;
+    font-weight: bold;
+    text-align: right;
+    width: 140px;
+    float: left;
+    /*border: 1px solid black;*/
+    /*margin-top: 4px;*/
+    /*color: blue;*/
+}
+
+.formLayout .small {
+    color: #666666;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: right;
+    width: 140px;
+}
+
+.formLayout input {
+    font-size: 12px;
+    padding: 4px 2px;
+    border: solid 1px #aacfe4;
+}
+
+.formLayout input[type=text], .formLayout input[type=password], .formLayout input[type=checkbox] {
+    float: left;
+    width: 200px;
+    margin: 2px 0 20px 10px;
+}
+
+.formLayout input[type=checkbox], .formLayout input[type=radio] {
+    width: auto;
+}
+
+.formLayout input[type=radio] {
+    margin-left: 20px;
+}
+
+.formLayout button {
+    /*clear: both;*/
+    /*margin-left: 150px;*/
+    margin: auto;
+    /*width: 125px;*/
+    /*height: 31px;*/
+    background: #666666;
+    text-align: center;
+    line-height: 31px;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.spacer {
+    clear:both;
+    height:1px;
+}
+
+
+/* RichTextToolbar styling borrowed from Google's Showcase example app */
+
+.hasRichTextToolbar {
+  border: 0px;
+}
+.gwt-RichTextToolbar {
+  background: #e3e8f3 url(images/hborder.png) repeat-x 0px -2003px;
+  border-bottom: 1px solid #BBBBBB;
+  padding: 3px;
+  margin: 0px;
+}
+.gwt-RichTextToolbar .gwt-PushButton-up {
+  padding: 0px 1px 0px 0px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-PushButton-up-hovering {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 1px 0px 0px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-PushButton-down {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 0px 0px 1px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-PushButton-down-hovering {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 0px 0px 1px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-ToggleButton-up {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 1px 0px 0px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-ToggleButton-up-hovering {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 1px 0px 0px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-ToggleButton-down {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 0px 0px 1px;
+  border-width: 1px;
+}
+.gwt-RichTextToolbar .gwt-ToggleButton-down-hovering {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 0px 0px 0px 1px;
+  border-width: 1px;
+}

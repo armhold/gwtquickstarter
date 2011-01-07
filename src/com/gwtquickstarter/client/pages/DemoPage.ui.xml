@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+        <div style="width: 200px; height: 200px; border: 2px solid blue; background-color: beige; color: black;">
+
+            Demo Page. Demo Page. Demo Page. Demo Page. Demo Page.
+            Demo Page. Demo Page. Demo Page. Demo Page. Demo Page.
+
+            <div style="border: 2px solid green;">
+
+                Show Lesson: <g:HTML ui:field="lessonLabel"/>
+            </div>
+            Demo Page. Demo Page. Demo Page. Demo Page. Demo Page.
+            Demo Page. Demo Page. Demo Page. Demo Page. Demo Page.
+        </div>
+    </g:HTMLPanel>
+
+</ui:UiBinder>

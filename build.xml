@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="gwtstore" default="build" basedir=".">
+
+    <!-- Arguments to gwtc and devmode targets -->
+    <property name="gwt.args" value=""/>
+
+    <!-- Configure path to GWT SDK -->
+    <property name="gwt.sdk" location="${user.home}/gwt-versions/gwt-2.1.0"/>
+
+    <property name="appengine.sdk" location="${user.home}/appengine-java-sdk-1.4.0"/>
+
+    <property name="staging.dir" location="${basedir}/build"/>
+
+    <path id="project.class.path">
+        <pathelement location="${gwt.sdk}/gwt-user.jar"/>
+        <fileset dir="${gwt.sdk}" includes="gwt-dev*.jar"/>
+        <fileset dir="lib" includes="**/*.jar"/>
+
+        <pathelement location="${appengine.sdk}/lib/appengine-tools-api.jar"/>
+        <fileset dir="${appengine.sdk}/lib/user">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+
+    <target name="compile" description="Compile java source">
+        <mkdir dir="${staging.dir}/jar"/>
+
+        <javac srcdir="src" includes="**" encoding="utf-8"
+               destdir="${staging.dir}/jar"
+               source="1.6" target="1.6" nowarn="true"
+               debug="true" debuglevel="lines,vars,source">
+            <classpath refid="project.class.path"/>
+        </javac>
+
+    </target>
+
+    <target name="javadoc" description="create Javadocs">
+        <mkdir dir="${staging.dir}/javadoc"/>
+
+        <javadoc destdir="${staging.dir}/javadoc" classpathref="project.class.path">
+            <fileset dir="${basedir}/src" includes="**/*.java" />
+        </javadoc>
+    </target>
+
+    <target name="package" depends="compile" description="Create a jar file">
+        <copy todir="${staging.dir}/jar">
+            <fileset dir="src" />
+        </copy>
+
+        <zip destfile="${staging.dir}/quickstarter.jar" basedir="${staging.dir}/jar"/>
+    </target>
+
+    <target name="package-deps" description="Create a zip file of all dependent jars">
+        <mkdir dir="${staging.dir}/deps"/>
+        <copy todir="${staging.dir}/deps">
+            <fileset dir="lib" includes="**/*.jar"/>
+        </copy>
+
+        <zip destfile="${staging.dir}/alldeps.zip" basedir="${staging.dir}/deps"/>
+    </target>
+
+    <target name="clean" description="Cleans this project">
+        <delete dir="${staging.dir}" failonerror="false"/>
+    </target>
+
+</project>
