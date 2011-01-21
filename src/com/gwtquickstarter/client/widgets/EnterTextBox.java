@@ -1,6 +1,7 @@
 package com.gwtquickstarter.client.widgets;
 
 import com.google.gwt.event.dom.client.*;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.*;
 
 /**
@@ -9,32 +10,39 @@ import com.google.gwt.user.client.ui.*;
  *
  * @author Copyright (c) 2011 George Armhold
  */
-public class EnterTextBox extends TextBox implements KeyPressHandler, KeyDownHandler
+public class EnterTextBox extends TextBox implements KeyPressHandler
 {
     private Button submitButton;
 
     public EnterTextBox()
     {
         addKeyPressHandler(this);
-        addKeyDownHandler(this);
         setFocus(true);
-    }
-
-    @Override
-    public void onKeyDown(KeyDownEvent event)
-    {
-        if (event.getNativeEvent().getCharCode() == KeyCodes.KEY_ENTER)
-        {
-            if (submitButton != null) submitButton.click();
-        }
     }
 
     @Override
     public void onKeyPress(KeyPressEvent event)
     {
-        if (event.getCharCode() == KeyCodes.KEY_ENTER)
+        // this "enter detection" is necessarily ugly. see: http://code.google.com/p/google-web-toolkit/issues/detail?id=5558#c6
+
+        boolean isEnter;
+        int charCode = event.getUnicodeCharCode();
+        if (charCode == 0)
         {
-            if (submitButton != null) submitButton.click();
+            // it's probably Firefox
+            int keyCode = event.getNativeEvent().getKeyCode();
+            // beware! keyCode=40 means "down arrow", while charCode=40 means '('
+            // always check the keyCode against a list of "known to be buggy" codes!
+            isEnter = keyCode == KeyCodes.KEY_ENTER ;
+        }
+        else
+        {
+            isEnter = charCode == 13;
+        }
+
+        if (isEnter && submitButton != null)
+        {
+            submitButton.click();
         }
     }
 

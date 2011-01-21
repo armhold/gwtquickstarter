@@ -48,7 +48,7 @@
             <fileset dir="src" />
         </copy>
 
-        <zip destfile="${staging.dir}/quickstarter.jar" basedir="${staging.dir}/jar"/>
+        <zip destfile="${staging.dir}/gwtquickstarter.jar" basedir="${staging.dir}/jar"/>
     </target>
 
     <target name="package-deps" description="Create a zip file of all dependent jars">

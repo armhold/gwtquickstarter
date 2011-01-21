@@ -12,10 +12,6 @@ public class CenteredPopup extends PopupPanel
     protected void onAttach()
     {
         super.onAttach();
-
-        int x = (Window.getClientWidth() - getOffsetWidth()) / 2;
-        int y = (Window.getClientHeight() - getOffsetHeight()) / 3;
-
-        setPopupPosition(x, y);
+        center();
     }
 }
