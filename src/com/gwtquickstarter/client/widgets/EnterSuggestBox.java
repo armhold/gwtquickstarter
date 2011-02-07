@@ -1,7 +1,8 @@
 package com.gwtquickstarter.client.widgets;
 
-import com.google.gwt.event.dom.client.*;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.SuggestBox;
+import com.google.gwt.user.client.ui.SuggestOracle;
 
 /**
  * A simple TextBox extension that allows user to "submit" by pressing enter.
@@ -9,11 +10,15 @@ import com.google.gwt.user.client.ui.*;
  *
  * @author Copyright (c) 2011 George Armhold
  */
-public class EnterPasswordBox extends PasswordTextBox
+public class EnterSuggestBox extends SuggestBox
 {
-    public EnterPasswordBox()
+    public EnterSuggestBox()
     {
-        setFocus(true);
+    }
+
+    public EnterSuggestBox(SuggestOracle oracle)
+    {
+        super(oracle);
     }
 
     public void setSubmitButton(Button submitButton)
